@@ -1,8 +1,0 @@
-0:0:0:0:0:0:0:1 - - [10/Nov/2018:01:24:29 +0800] "GET /brand/findAll.do HTTP/1.1" 200 908 http-bio-9101-exec-1 4087
-0:0:0:0:0:0:0:1 - - [10/Nov/2018:01:24:32 +0800] "GET /brand/findAll.do HTTP/1.1" 200 908 http-bio-9101-exec-3 19
-0:0:0:0:0:0:0:1 - - [10/Nov/2018:01:24:41 +0800] "GET /brand/findAll.do HTTP/1.1" 200 908 http-bio-9101-exec-4 9
-0:0:0:0:0:0:0:1 - - [10/Nov/2018:01:24:42 +0800] "GET /brand/findAll.do HTTP/1.1" 200 908 http-bio-9101-exec-6 10
-0:0:0:0:0:0:0:1 - - [10/Nov/2018:01:24:42 +0800] "GET /brand/findAll.do HTTP/1.1" 200 908 http-bio-9101-exec-7 10
-0:0:0:0:0:0:0:1 - - [10/Nov/2018:01:24:42 +0800] "GET /brand/findAll.do HTTP/1.1" 200 908 http-bio-9101-exec-8 9
-0:0:0:0:0:0:0:1 - - [10/Nov/2018:01:24:43 +0800] "GET /brand/findAll.do HTTP/1.1" 200 908 http-bio-9101-exec-9 8
-0:0:0:0:0:0:0:1 - - [10/Nov/2018:01:24:44 +0800] "GET /brand/findAll.do HTTP/1.1" 200 908 http-bio-9101-exec-10 12
