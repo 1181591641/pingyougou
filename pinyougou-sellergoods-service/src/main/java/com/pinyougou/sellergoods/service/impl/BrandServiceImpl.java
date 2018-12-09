@@ -1,8 +1,10 @@
 package com.pinyougou.sellergoods.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.Page;
@@ -16,6 +18,7 @@ import com.pinyougou.sellergoods.service.IBrandService;
 import entity.PageResult;
 
 @Service
+@Transactional
 public class BrandServiceImpl implements IBrandService {
 
 	@Autowired
@@ -37,7 +40,7 @@ public class BrandServiceImpl implements IBrandService {
 
 		PageHelper.startPage(pageNum, pageSize);// 分页
 
-		Page<TbBrand> page = (Page<TbBrand>) brandMapper.selectByExample(null);
+		com.github.pagehelper.Page<TbBrand> page = (com.github.pagehelper.Page<TbBrand>) brandMapper.selectByExample(null);
 
 		return new PageResult(page.getTotal(), page.getResult());
 	}
@@ -59,8 +62,10 @@ public class BrandServiceImpl implements IBrandService {
 		TbBrandExample example = new TbBrandExample();
 
 		if (brand != null) {
-			Criteria criteria = example.createCriteria();
-			criteria.andNameEqualTo(brand.getName());
+			if (brand.getName() != "") {
+				Criteria criteria = example.createCriteria();
+				criteria.andNameEqualTo(brand.getName());
+			}
 		}
 		return brandMapper.selectByExample(example).get(0);
 
@@ -98,24 +103,29 @@ public class BrandServiceImpl implements IBrandService {
 	@Override
 
 	public PageResult findPage(TbBrand brand, int pageNum, int pageSize) throws Exception {
-		
-		PageHelper.startPage(pageNum, pageSize);//分页	
-		
-		TbBrandExample example=new TbBrandExample();
-		
+
+		PageHelper.startPage(pageNum, pageSize);// 分页
+
+		TbBrandExample example = new TbBrandExample();
+
 		Criteria criteria = example.createCriteria();
-		if(brand!=null){
-			if(brand.getName()!=null && brand.getName().length()>0){
-				criteria.andNameLike("%"+brand.getName()+"%");
+		if (brand != null) {
+			if (brand.getName() != null && brand.getName().length() > 0) {
+				criteria.andNameLike("%" + brand.getName() + "%");
 			}
-			if(brand.getFirstChar()!=null && brand.getFirstChar().length()>0){
-				criteria.andFirstCharLike("%"+brand.getFirstChar()+"%");
-			}			
+			if (brand.getFirstChar() != null && brand.getFirstChar().length() > 0) {
+				criteria.andFirstCharLike("%" + brand.getFirstChar() + "%");
+			}
 		}
-		
+
 		Page<TbBrand> page = (Page<TbBrand>) brandMapper.selectByExample(example);
-		
+
 		return new PageResult(page.getTotal(), page.getResult());
+	}
+
+	@Override
+	public List<Map> selectOptionList() {
+		return brandMapper.selectOptionList();
 	}
 
 }

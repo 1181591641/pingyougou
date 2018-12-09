@@ -34,14 +34,17 @@ com\pinyougou\pojo\TbSpecificationExample$GeneratedCriteria.class
 com\pinyougou\pojo\TbItemCatExample$GeneratedCriteria.class
 com\pinyougou\pojo\TbGoodsExample$Criteria.class
 com\pinyougou\pojo\TbPayLogExample$GeneratedCriteria.class
+com\pinyougou\pojogroup\Specification.class
 com\pinyougou\pojo\TbGoodsDescExample.class
 com\pinyougou\pojo\TbOrderExample$Criterion.class
 com\pinyougou\pojo\TbContentCategoryExample$Criterion.class
 com\pinyougou\pojo\TbSellerExample$Criteria.class
 com\pinyougou\pojo\TbGoodsExample.class
+com\pinyougou\pojogroup\Goods.class
 com\pinyougou\pojo\TbPayLogExample$Criterion.class
 com\pinyougou\pojo\TbItemCatExample$Criteria.class
 com\pinyougou\pojo\TbTypeTemplateExample.class
+com\pinyougou\pojogroup\ItemCat.class
 com\pinyougou\pojo\TbSeller.class
 com\pinyougou\pojo\TbCitiesExample.class
 com\pinyougou\pojo\TbContentCategory.class

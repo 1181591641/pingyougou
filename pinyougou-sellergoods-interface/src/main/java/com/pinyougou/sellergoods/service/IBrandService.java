@@ -2,9 +2,13 @@ package com.pinyougou.sellergoods.service;
 
 import java.util.List;
 
+
+
 import com.pinyougou.pojo.TbBrand;
 
 import entity.PageResult;
+import java.util.Map;
+
 
 /**
  * 品牌接口
@@ -72,6 +76,11 @@ public interface IBrandService {
 	 */
 	
 	PageResult findPage(TbBrand brand, int pageNum, int pageSize)throws Exception;
+	/**
+	 * 返回下拉列表数据
+	 * @return
+	 */
+	public List<Map> selectOptionList();
 }
 
 

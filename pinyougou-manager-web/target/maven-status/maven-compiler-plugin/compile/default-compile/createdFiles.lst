@@ -1,1 +1,16 @@
+com\pinyougou\mannager\controller\LoginController.class
+com\pinyougou\mannager\controller\GoodsController.class
+com\pinyougou\mannager\controller\TypeTemplateController.class
+com\pinyougou\mannager\controller\GoodsController$3.class
+com\pinyougou\mannager\controller\GoodsController$2.class
+com\pinyougou\mannager\controller\ItemController.class
+com\pinyougou\mannager\controller\ContentController.class
+com\pinyougou\mannager\controller\SellerController.class
+com\pinyougou\mannager\controller\ItemCatController.class
+com\pinyougou\mannager\controller\UploadController.class
+com\pinyougou\mannager\controller\ContentCategoryController.class
+com\pinyougou\mannager\controller\SpecificationController.class
+com\pinyougou\mannager\controller\GoodsController$1.class
 com\pinyougou\mannager\controller\BrandController.class
+com\pinyougou\mannager\controller\SpecificationOptionController.class
+com\pinyougou\mannager\controller\GoodsDescController.class

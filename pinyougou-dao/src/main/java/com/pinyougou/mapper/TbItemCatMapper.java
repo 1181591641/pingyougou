@@ -2,6 +2,8 @@ package com.pinyougou.mapper;
 
 import com.pinyougou.pojo.TbItemCat;
 import com.pinyougou.pojo.TbItemCatExample;
+import com.pinyougou.pojogroup.ItemCat;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -19,6 +21,7 @@ public interface TbItemCatMapper {
     List<TbItemCat> selectByExample(TbItemCatExample example);
 
     TbItemCat selectByPrimaryKey(Long id);
+    
 
     int updateByExampleSelective(@Param("record") TbItemCat record, @Param("example") TbItemCatExample example);
 
@@ -27,4 +30,6 @@ public interface TbItemCatMapper {
     int updateByPrimaryKeySelective(TbItemCat record);
 
     int updateByPrimaryKey(TbItemCat record);
+
+
 }

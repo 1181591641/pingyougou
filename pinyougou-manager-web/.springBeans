@@ -9,6 +9,9 @@
 	<configs>
 	</configs>
 	<autoconfigs>
+		<config>src/main/resources/spring/springmvc.xml</config>
+		<config>src/test/resources/spring/springmvc.xml</config>
+		<config>src/main/resources/spring/spring-security.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

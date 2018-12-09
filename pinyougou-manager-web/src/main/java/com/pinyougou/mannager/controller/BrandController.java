@@ -1,6 +1,7 @@
 package com.pinyougou.mannager.controller;
 
 
+import java.awt.geom.Ellipse2D;
 import java.util.List;
 
 
@@ -17,7 +18,7 @@ import com.pinyougou.sellergoods.service.IBrandService;
 
 import entity.PageResult;
 import entity.Result;
-
+import java.util.Map;
 /**
  * 
  * @ClassName: BrandController
@@ -69,7 +70,6 @@ public class BrandController {
 
 	@RequestMapping("/Names")
 	public Result Names(@RequestBody TbBrand brand) {
-		System.out.println(brand.getName());
 		try {
 			brandService.Names(brand);
 			return new Result(true, "商品名称重复");
@@ -87,13 +87,19 @@ public class BrandController {
 	 */
 	@RequestMapping("/add")
 	public Result add(@RequestBody TbBrand brand) {
-
+if(brand!=null&&brand.getName()!=null&&!brand.equals(""))
+{
 		try {
 			brandService.add(brand);
 			return new Result(true, "添加成功");
 		} catch (Exception e) {
 			return new Result(false, "添加失败");
 		}
+	}
+	else
+	{
+		return new Result(false, "添加失败");
+	}
 	}
 
 	/**
@@ -105,8 +111,7 @@ public class BrandController {
 	 */
 	@RequestMapping("/findOne")
 	public TbBrand findOne(Long id) throws Exception {
-		System.out.println(id);
-		System.out.println(brandService.findOne(id));
+	
 		return brandService.findOne(id);
 	}
 
@@ -146,5 +151,10 @@ public class BrandController {
 
 		return brandService.findPage(brand, page, size);
 	}
+	 @RequestMapping("/selectOptionList")
+	 public List<Map> selectOptionList()
+	 {
+		 return brandService.selectOptionList();
+	 }
 	 
 }
